@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_training/providers/counter_provider.dart';
 import 'package:provider/provider.dart';
 
 class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     // final counter = Provider.of<Counter>(context);
@@ -15,7 +16,7 @@ class CounterScreen extends StatelessWidget {
           builder: (context, counter, child) {
             return Text(
               'Count: ${counter.count}',
-              style: TextStyle(fontSize: 24.0),
+              style: const TextStyle(fontSize: 24.0),
             );
           },
         ),
@@ -23,16 +24,16 @@ class CounterScreen extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Consumer<Counter>(
               builder: (context, counter, child) {
                 return Text(
                   'Count: ${counter.count}',
-                  style: TextStyle(fontSize: 24.0),
+                  style: const TextStyle(fontSize: 24.0),
                 );
               },
             ),
-            ButtonRow()
+            const ButtonRow()
           ],
         ),
       ),
@@ -43,6 +44,8 @@ class CounterScreen extends StatelessWidget {
 
 
 class ButtonRow extends StatelessWidget {
+  const ButtonRow({super.key});
+
   @override
   Widget build(BuildContext context) {
     final counter = Provider.of<Counter>(context, listen: false);
@@ -51,11 +54,11 @@ class ButtonRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: Icon(Icons.add),
+          icon: const Icon(Icons.add),
           onPressed: counter.increment,
         ),
         IconButton(
-          icon: Icon(Icons.remove),
+          icon: const Icon(Icons.remove),
           onPressed: counter.decrement,
         ),
       ],

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/combinedStream.dart';
-import 'package:flutter_training/page1.dart';
 import 'package:flutter_training/providers/counter_provider.dart';
 import 'package:flutter_training/screens/counter_screen.dart';
-import 'package:flutter_training/streamExample.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -40,7 +37,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body:  ChangeNotifierProvider(
           create: (context) => Counter(),
-          child: CounterScreen(),
+          child: const CounterScreen(),
         ),
         appBar: AppBar(
           // TRY THIS: Try changing the color here to a specific color (to
@@ -49,7 +46,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
-          title: Text("widget.title"),
+          title: const Text("widget.title"),
         ),
       ),
     );

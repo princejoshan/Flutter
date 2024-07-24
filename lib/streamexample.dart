@@ -75,7 +75,7 @@ class BroadcastStreamExampleState extends State<BroadcastStreamExample> {
               onPressed: (){
                 _controller.close();
               },
-              child: Text('close stream'),
+              child: const Text('close stream'),
             ),
           ],
         ),

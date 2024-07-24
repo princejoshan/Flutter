@@ -21,7 +21,7 @@ class FutureBuilderExampleState extends State<FutureBuilderExample> {
 
 
   Future<Map<String, dynamic>> fetchData() async {
-    print("api call");
+
     final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/todos/2'));
 
     if (response.statusCode == 200) {
@@ -60,7 +60,7 @@ class FutureBuilderExampleState extends State<FutureBuilderExample> {
         ),
         ElevatedButton(
           onPressed: _refreshData,
-          child: Text('Refetch Data'),
+          child: const Text('Refetch Data'),
         ),
       ],
     );
