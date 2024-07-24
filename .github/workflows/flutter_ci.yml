@@ -1,7 +1,7 @@
 name: Flutter CI
 
 on:
-  workflow_dispatch:  # Allows manual triggering of the workflow
+  workflow_dispatch:  # aAllows manual triggering of the workflow
 
   # push:
   #   branches: [ main ]
